@@ -1,1 +1,20 @@
+on:
+  push:
+    branches:
+      - project
+
+
+
+
+
+jops:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: action/checkout@v3
+
+      - name: "Login to Dockerhub"
+        run: docker login --username awd896541 --password dckr_pat_55UFaYR2uaY6UJUKr346JS2JJnk
+
 
